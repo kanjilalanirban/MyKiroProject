@@ -99,6 +99,7 @@ MyKiroProject/
 - **GitHub Setup**: `GITHUB_SETUP.md` - Detailed GitHub instructions
 - **AWS Setup**: `IaC/SETUP.md` - AWS OIDC, IAM, S3 backend
 - **Infrastructure**: `IaC/README.md` - Terraform code documentation
+- **Testing**: `TESTING.md` - Complete testing guide
 
 ## Workflows
 

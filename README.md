@@ -66,12 +66,15 @@ MyKiroProject/
 
 - [Infrastructure Documentation](IaC/README.md)
 - [Setup Guide](IaC/SETUP.md)
+- [Testing Guide](IaC/tests/README.md)
 
 ## GitHub Actions Workflows
 
 - **Deploy EKS Cluster**: Automated deployment on push to main
 - **Terraform Plan on PR**: Preview changes in pull requests
 - **Security Scan**: Weekly security scans with tfsec and Checkov
+- **Terraform Test**: Validation, linting, and security checks on every push
+- **Integration Tests**: Full cluster deployment and testing (manual/weekly)
 
 ## Security
 
