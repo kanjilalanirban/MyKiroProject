@@ -1,0 +1,17 @@
+# Example backend configuration for storing Terraform state in S3
+# Copy this file to backend.tf and update with your values
+
+terraform {
+  backend "s3" {
+    bucket         = "your-terraform-state-bucket"
+    key            = "eks-pci-compliant/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    kms_key_id     = "arn:aws:kms:us-east-1:ACCOUNT_ID:key/KEY_ID"
+    dynamodb_table = "terraform-state-lock"
+    
+    # Enable versioning on the S3 bucket for state history
+    # Enable server-side encryption
+    # Enable bucket logging for audit trail
+  }
+}

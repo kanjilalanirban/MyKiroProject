@@ -1,0 +1,29 @@
+# Example terraform.tfvars file
+cluster_name    = "pci-compliant-eks"
+environment     = "production"
+kubernetes_version = "1.28"
+
+# Network Configuration
+vpc_id     = "vpc-xxxxxxxxx"
+subnet_ids = ["subnet-xxxxxxxx", "subnet-yyyyyyyy", "subnet-zzzzzzzz"]
+
+# Security Configuration
+enable_public_access = false
+allowed_cidr_blocks  = ["10.0.0.0/8"]  # Internal network only
+
+# Node Configuration
+desired_size   = 3
+min_size       = 2
+max_size       = 5
+instance_types = ["t3.medium"]
+capacity_type  = "ON_DEMAND"
+disk_size      = 50
+
+# Do not associate public IPs (PCI requirement)
+associate_public_ip_address = false
+
+# Logging
+log_retention_days = 90
+
+# Enable IRSA
+enable_irsa = true
